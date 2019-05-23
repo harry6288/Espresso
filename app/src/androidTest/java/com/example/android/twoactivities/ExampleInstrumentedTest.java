@@ -18,20 +18,47 @@ package com.example.android.twoactivities;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * Instrumented test, which will execute on an Android device.
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ * 1.what screen do you want test
+ * find element on screen
+ * if button click on it
+ * if input box = type stuff in it
+ * if label -- check the text
+ * check actual = expected
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
+    @Rule
+    public ActivityTestRule activityTestRule = new ActivityTestRule<>(MainActivity.class);
+
+    //test cases
+    // tc1: when you push the send button it goes to next screen
+
+    @Test
+    public void testGoingToNextPage(){
+
+    }
+
+    @Test
+    public void testInputBox()
+    {
+        fail("this test case is not implemented");
+    }
+
+
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
